@@ -1,0 +1,78 @@
+body {
+  margin: 0;
+  padding: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #0c0c0f;
+  color: #f0f0f5;
+  line-height: 1.6;
+}
+
+header.hero {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+header.hero h1 {
+  font-size: 3rem;
+  background: linear-gradient(90deg, #7f00ff, #e100ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 0.5rem;
+}
+
+header.hero p {
+  font-size: 1.25rem;
+  color: #ccc;
+}
+
+section.highlight {
+  background: #1a1a22;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  border-left: 4px solid #7f00ff;
+}
+
+section.highlight h2 {
+  margin-top: 0;
+  color: #ff66ff;
+}
+
+a.btn {
+  display: inline-block;
+  margin-top: 0.75rem;
+  padding: 0.5rem 1rem;
+  background: #7f00ff;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+a.btn:hover {
+  background: #a800ff;
+}
+
+section.sections {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+section.sections .block {
+  background: #16161c;
+  padding: 1.25rem;
+  flex: 1 1 300px;
+  border-radius: 8px;
+  border: 1px solid #2c2c38;
+}
+
+footer {
+  margin-top: 4rem;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #888;
+}
+
+footer a {
+  color: #aaa;
+  text-decoration: underline;
+}
