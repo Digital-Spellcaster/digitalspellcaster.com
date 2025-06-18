@@ -7,6 +7,28 @@ body {
   line-height: 1.6;
 }
 
+.nav {
+  position: sticky;
+  top: 0;
+  background-color: #0c0c0f;
+  padding: 1rem;
+  display: flex;
+  gap: 1.25rem;
+  justify-content: center;
+  border-bottom: 1px solid #222;
+  z-index: 1000;
+}
+
+.nav a {
+  color: #aaa;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav a:hover {
+  color: #fff;
+}
+
 header.hero {
   text-align: center;
   margin-bottom: 3rem;
@@ -65,6 +87,17 @@ section.sections .block {
   border: 1px solid #2c2c38;
 }
 
+section.laws a {
+  color: #00eaff;
+  font-weight: bold;
+  text-shadow: 0 0 4px #3f00ff, 0 0 8px #7f00ff;
+  transition: text-shadow 0.3s ease;
+}
+
+section.laws a:hover {
+  text-shadow: 0 0 8px #9c4dff, 0 0 16px #e100ff;
+}
+
 footer {
   margin-top: 4rem;
   text-align: center;
@@ -75,4 +108,19 @@ footer {
 footer a {
   color: #aaa;
   text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  body {
+    padding: 1rem;
+  }
+  .sections {
+    flex-direction: column;
+  }
+  .nav {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    font-size: 0.95rem;
+  }
 }
