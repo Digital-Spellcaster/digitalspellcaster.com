@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -66,7 +65,7 @@
             margin-top: 0;
             color: #ff66ff;
         }
-        
+
         section.highlight .coming-soon {
             font-style: italic;
             color: #00eaff;
@@ -74,8 +73,13 @@
             margin-top: 1rem;
         }
 
+        .game-trailer {
+            text-align: center;
+            margin: 2rem 0;
+        }
+
         .game-trailer img {
-            max-width: 100%;
+            max-width: 150px; /* Adjust size as needed */
             border-radius: 8px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.5);
             border: 2px solid #333;
@@ -101,7 +105,7 @@
             transform: translateY(-5px);
             box-shadow: 0 8px 15px rgba(0,0,0,0.4);
         }
-        
+
         section.sections .block h3 {
             color: #9c4dff;
             margin-top: 0;
@@ -175,8 +179,8 @@
             <p class="coming-soon">Coming to the Play Store Soon!</p>
         </section>
 
-        <section class="game-trailer" style="text-align:center; margin: 2rem 0;">
-             <img src="https://via.placeholder.com/640x360.png?text=Retro+Snake+Game+Trailer+Here" alt="Retro Snake Pixel Art Edition Game Trailer">
+        <section class="game-trailer">
+             <img src="splash_black_bg.png" alt="Retro Snake Pixel Art Edition Icon">
         </section>
 
         <section class="sections">
@@ -223,7 +227,7 @@
                     radius: Math.random() * 1.5 + 0.3,
                     velocity: Math.random() * 0.15 + 0.05,
                     alpha: Math.random(),
-                    glow: Math.random() * 2 
+                    glow: Math.random() * 2
                 });
             }
         }
