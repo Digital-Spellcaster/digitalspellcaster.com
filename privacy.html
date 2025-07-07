@@ -1,55 +1,224 @@
-<!DOCTYPE html>
+0<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Privacy Policy – Retro Snake</title>
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Privacy Policy – Retro Snake</title>
+    <style>
+        /* General Body and Background Styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #0c0c0f;
+            color: #f0f0f5;
+            line-height: 1.6;
+        }
+
+        #starfield {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            width: 100%;
+            height: 100%;
+            background: black;
+            pointer-events: none;
+        }
+
+        main, .sections {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Header and Hero Section */
+        header.hero {
+            text-align: center;
+            margin: 4rem auto 3rem auto;
+        }
+
+        header.hero h1 {
+            font-size: 3rem;
+            background: linear-gradient(90deg, #7f00ff, #e100ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem;
+        }
+
+        header.hero p {
+            font-size: 1.25rem;
+            color: #ccc;
+        }
+
+        .subtitle-glow {
+            color: #00eaff;
+            font-weight: bold;
+            text-shadow: 0 0 4px #00eaff, 0 0 10px #3f00ff;
+        }
+
+        /* Content Sections */
+        .sections {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            justify-content: center;
+        }
+
+        .block {
+            background: #16161c;
+            padding: 1.25rem;
+            flex: 1 1 300px;
+            border-radius: 8px;
+            border: 1px solid #2c2c38;
+        }
+
+        .block h3 {
+            color: #9c4dff;
+            margin-top: 0;
+        }
+
+        .block ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        
+        .block li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 4rem;
+            padding: 2rem 1rem;
+            text-align: center;
+            font-size: 0.85rem;
+            color: #888;
+            border-top: 1px solid #222;
+        }
+
+        footer a, .block a {
+            color: #00eaff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        footer a:hover, .block a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            body {
+                padding: 0;
+            }
+            main, .sections {
+                padding: 2rem 1rem;
+            }
+            header.hero h1 {
+                font-size: 2.5rem;
+            }
+            .sections {
+                flex-direction: column;
+            }
+        }
+    </style>
 </head>
 <body>
-  <canvas id="starfield"></canvas>
+    <canvas id="starfield"></canvas>
 
-  <header class="hero">
-    <h1>Privacy Policy</h1>
-    <p>Retro Snake – Pixel Art Edition</p>
-  </header>
+    <main>
+        <header class="hero">
+            <h1>Privacy Policy</h1>
+            <p class="subtitle-glow">Retro Snake – Pixel Art Edition</p>
+        </header>
 
-  <section class="sections">
-    <div class="block">
-      <h3>🔒 No Data Collected</h3>
-      <p>This game does not collect, store, or share any personal information.</p>
-    </div>
+        <section class="sections">
+            <div class="block">
+                <h3>🔒 No Data Collected</h3>
+                <p>This game does not collect, store, or share any personal information.</p>
+            </div>
 
-    <div class="block">
-      <h3>📴 Offline and Ad-Free</h3>
-      <p>Retro Snake is a fully offline experience. It does not connect to the internet, and contains no ads, no trackers, and no telemetry.</p>
-    </div>
+            <div class="block">
+                <h3>📴 Offline and Ad-Free</h3>
+                <p>Retro Snake is a fully offline experience. It does not connect to the internet, and contains no ads, no trackers, and no telemetry.</p>
+            </div>
 
-    <div class="block">
-      <h3>🤝 No Permissions Required</h3>
-      <p>The app does not request access to your device’s storage, contacts, location, camera, microphone, or any sensitive services.</p>
-    </div>
+            <div class="block">
+                <h3>🤝 No Permissions Required</h3>
+                <p>The app does not request access to your device’s storage, contacts, location, camera, microphone, or any sensitive services.</p>
+            </div>
 
-    <div class="block">
-      <h3>⚖️ Transparency by Design</h3>
-      <p>This policy exists to reassure you: nothing hidden, nothing mined. Just a game, pure and simple.</p>
-    </div>
+            <div class="block">
+                <h3>⚖️ Transparency by Design</h3>
+                <p>This policy exists to reassure you: nothing hidden, nothing mined. Just a game, pure and simple.</p>
+            </div>
 
-    <div class="block">
-      <h3>📬 Contact the Spellcaster</h3>
-      <p>If you have any questions or concerns, you may reach us directly:</p>
-      <ul>
-        <li>Email: <a href="mailto:admin@digitalspellcaster.com">admin@digitalspellcaster.com</a></li>
-        <li>Website: <a href="https://www.digitalspellcaster.com">www.digitalspellcaster.com</a></li>
-      </ul>
-    </div>
-  </section>
+            <div class="block">
+                <h3>📬 Contact the Spellcaster</h3>
+                <p>If you have any questions or concerns, you may reach us directly:</p>
+                <ul>
+                    <li>Email: <a href="mailto:admin@digitalspellcaster.com">admin@digitalspellcaster.com</a></li>
+                    <li>Website: <a href="https://www.digitalspellcaster.com">www.digitalspellcaster.com</a></li>
+                </ul>
+            </div>
+        </section>
 
-  <footer>
-    <p>© 2025 The Digital Spellcaster — <a href="https://www.digitalspellcaster.com">www.digitalspellcaster.com</a><br />
-    A Never Never Studios Production</p>
-  </footer>
+        <footer>
+            <p>© 2025 The Digital Spellcaster — <a href="https://www.digitalspellcaster.com">www.digitalspellcaster.com</a></p>
+        </footer>
+    </main>
 
-  <script src="starfield.js"></script>
+    <script>
+        const canvas = document.getElementById('starfield');
+        if (canvas) {
+            const ctx = canvas.getContext('2d');
+            let stars = [];
+
+            function resize() {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+            }
+            window.addEventListener('resize', resize);
+            resize();
+
+            function createStars(count) {
+                stars = [];
+                for (let i = 0; i < count; i++) {
+                    stars.push({
+                        x: Math.random() * canvas.width,
+                        y: Math.random() * canvas.height,
+                        radius: Math.random() * 1.5 + 0.3,
+                        velocity: Math.random() * 0.15 + 0.05,
+                        alpha: Math.random(),
+                        glow: Math.random() * 2 
+                    });
+                }
+            }
+            createStars(300);
+
+            function draw() {
+                if (!ctx) return;
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                for (let star of stars) {
+                    ctx.beginPath();
+                    ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
+                    ctx.fillStyle = `rgba(255, 255, 255, ${star.alpha})`;
+                    ctx.shadowColor = '#7f00ff';
+                    ctx.shadowBlur = star.glow;
+                    ctx.fill();
+
+                    star.y += star.velocity;
+
+                    if (star.y > canvas.height) {
+                        star.y = 0;
+                        star.x = Math.random() * canvas.width;
+                    }
+                }
+                requestAnimationFrame(draw);
+            }
+            draw();
+        }
+    </script>
 </body>
 </html>
