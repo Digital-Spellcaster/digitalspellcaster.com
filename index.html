@@ -1,57 +1,262 @@
+Of course, Digital Spellcaster. I've added the note "Coming to the Play Store Soon\!" right below the main game description.
+
+Here is the updated code for your `index.html` file.
+
+-----
+
+### `index.html` with Play Store Note
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>The Digital Spellcaster</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="icon" type="image/png" href="IAI-B.png" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Digital Spellcaster - Retro Snake Pixel Art Edition</title>
+    <link rel="icon" type="image/png" href="IAI-B.png" />
+    <style>
+        /* General Body and Background Styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #0c0c0f;
+            color: #f0f0f5;
+            line-height: 1.6;
+        }
+
+        #starfield {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            width: 100%;
+            height: 100%;
+            background: black;
+            pointer-events: none;
+        }
+
+        main {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 3rem 2rem 2rem 2rem;
+        }
+
+        /* Header and Hero Section */
+        header.hero {
+            text-align: center;
+            margin: 4rem auto 3rem auto;
+        }
+
+        header.hero h1 {
+            font-size: 3rem;
+            background: linear-gradient(90deg, #7f00ff, #e100ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem;
+        }
+
+        header.hero p {
+            font-size: 1.25rem;
+            color: #ccc;
+        }
+
+        /* Highlight and Content Sections */
+        section.highlight {
+            background: #1a1a22;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            border-left: 4px solid #7f00ff;
+            border-radius: 4px;
+        }
+
+        section.highlight h2 {
+            margin-top: 0;
+            color: #ff66ff;
+        }
+        
+        section.highlight .coming-soon {
+            font-style: italic;
+            color: #00eaff;
+            font-weight: bold;
+            margin-top: 1rem;
+        }
+
+        .game-trailer img {
+            max-width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+            border: 2px solid #333;
+        }
+
+        section.sections {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            justify-content: center;
+        }
+
+        section.sections .block {
+            background: #16161c;
+            padding: 1.25rem;
+            flex: 1 1 300px;
+            border-radius: 8px;
+            border: 1px solid #2c2c38;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        section.sections .block:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.4);
+        }
+        
+        section.sections .block h3 {
+            color: #9c4dff;
+            margin-top: 0;
+        }
+
+        /* Buttons and Links */
+        a.btn {
+            display: inline-block;
+            margin-top: 0.75rem;
+            padding: 0.5rem 1rem;
+            background: #7f00ff;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        a.btn:hover {
+            background: #a800ff;
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 4rem;
+            padding: 2rem 1rem;
+            text-align: center;
+            font-size: 0.85rem;
+            color: #888;
+            border-top: 1px solid #222;
+        }
+
+        footer a {
+            color: #aaa;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: #fff;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            body {
+                padding: 0;
+            }
+            main {
+                padding: 2rem 1rem;
+            }
+            header.hero h1 {
+                font-size: 2.5rem;
+            }
+            .sections {
+                flex-direction: column;
+            }
+        }
+    </style>
 </head>
 <body>
-  <canvas id="starfield"></canvas>
+    <canvas id="starfield"></canvas>
 
-  <main>
-    <header class="hero">
-      <h1>The Digital Spellcaster</h1>
-      <p>Crafting code. Casting protocols. Orchestrating AI Rituals.</p>
-    </header>
+    <main>
+        <header class="hero">
+            <h1>The Digital Spellcaster</h1>
+            <p>Presents a new twist on a classic...</p>
+        </header>
 
-    <section class="highlight">
-      <h2>🧠 IAI-Bus Assistant</h2>
-      <p>A ritualized protocol for managing multi-AI clusters using role maps, memory logs, and transmission blocks.</p>
-      <a href="https://chat.openai.com/g/g-68528348b9b081919ed8f3fd9763a880-iai-bus-assistant" target="_blank" class="btn">Invoke GPT</a>
-    </section>
+        <section class="highlight">
+            <h2>🐍 Retro Snake Pixel Art Edition</h2>
+            <p>Relive the classic arcade game, reimagined with beautiful pixel art and challenging new levels. Get ready to chase high scores and climb the leaderboards!</p>
+            <p class="coming-soon">Coming to the Play Store Soon!</p>
+        </section>
 
-    <section class="sections">
-      <div class="block">
-        <h3>🔮 What Is The IAI-Bus?</h3>
-        <p>A creative orchestration layer built to manage AIs like ChatGPT and Gemini with structure and intent, using Transmission Protocols and defined roles.</p>
-      </div>
+        <section class="game-trailer" style="text-align:center; margin: 2rem 0;">
+             <img src="https://via.placeholder.com/640x360.png?text=Retro+Snake+Game+Trailer+Here" alt="Retro Snake Pixel Art Edition Game Trailer">
+        </section>
 
-      <div class="block">
-        <h3>📜 Transmission Protocol</h3>
-        <p>Send structured YAML messages across agents. Simulate shared memory. Route logic and creativity through a single living bus: the human operator.</p>
-      </div>
+        <section class="sections">
+            <div class="block">
+                <h3>🕹️ Nostalgic Gameplay</h3>
+                <p>The simple, addictive gameplay you love, enhanced with smooth controls and new obstacles to keep you on your toes.</p>
+            </div>
 
-      <div class="block">
-        <h3>🌐 Powered By</h3>
-        <ul>
-          <li>ChatGPT (Arcane Engine)</li>
-          <li>Gemini Prime & Familiar</li>
-          <li>You, the Spellcaster</li>
-        </ul>
-      </div>
-    </section>
+            <div class="block">
+                <h3>🎨 Stunning Pixel Art</h3>
+                <p>Explore vibrant, handcrafted levels, each with a unique theme and detailed pixel art that brings the world of Retro Snake to life.</p>
+            </div>
 
-    <section class="laws" style="text-align:center; margin-top: 4rem;">
-      <a href="/laws.html" target="_blank">Read the Laws of the Digital Spellcaster</a>
-    </section>
-  </main>
+            <div class="block">
+                <h3>⚙️ Customize Your Experience</h3>
+                <p>Tailor the game to your liking. Adjust graphics quality, cap the frame rate, and toggle the challenging Obstacle Mode for a truly personalized retro adventure.</p>
+            </div>
+        </section>
+    </main>
 
-  <footer>
-    <p>© 2025 The Digital Spellcaster — <a href="https://digitalspellcaster.com">digitalspellcaster.com</a><br />A Never Never Studios Production</p>
-  </footer>
+    <footer>
+        <p>© 2025 The Digital Spellcaster — <a href="https://digitalspellcaster.com">digitalspellcaster.com</a></p>
+        <p><a href="privacy.html">Privacy Policy</a></p>
+    </footer>
 
-  <script src="starfield.js"></script>
+    <script>
+        const canvas = document.getElementById('starfield');
+        const ctx = canvas.getContext('2d');
+        let stars = [];
+
+        function resize() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+        window.addEventListener('resize', resize);
+        resize();
+
+        function createStars(count) {
+            stars = [];
+            for (let i = 0; i < count; i++) {
+                stars.push({
+                    x: Math.random() * canvas.width,
+                    y: Math.random() * canvas.height,
+                    radius: Math.random() * 1.5 + 0.3,
+                    velocity: Math.random() * 0.15 + 0.05,
+                    alpha: Math.random(),
+                    glow: Math.random() * 2 
+                });
+            }
+        }
+        createStars(300);
+
+        function draw() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            for (let star of stars) {
+                ctx.beginPath();
+                ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
+                ctx.fillStyle = `rgba(255, 255, 255, ${star.alpha})`;
+                ctx.shadowColor = '#7f00ff'; // Purple glow for the stars
+                ctx.shadowBlur = star.glow;
+                ctx.fill();
+
+                star.y += star.velocity;
+
+                if (star.y > canvas.height) {
+                    star.y = 0;
+                    star.x = Math.random() * canvas.width;
+                }
+            }
+            requestAnimationFrame(draw);
+        }
+        draw();
+    </script>
 </body>
 </html>
