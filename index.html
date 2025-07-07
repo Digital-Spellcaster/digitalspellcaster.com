@@ -106,6 +106,7 @@
             border-radius: 8px;
             border: 1px solid #2c2c38;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
         }
 
         section.sections .block:hover {
@@ -116,6 +117,16 @@
         section.sections .block h3 {
             color: #9c4dff;
             margin-top: 0;
+        }
+        
+        section.sections .block ul {
+            text-align: left; 
+            padding-left: 25px; 
+            margin-top: 1rem;
+        }
+        
+        section.sections .block li {
+            margin-bottom: 0.5rem;
         }
 
         /* Footer */
@@ -187,7 +198,12 @@
 
             <div class="block">
                 <h3>⚙️ Customize Your Experience</h3>
-                <p>Tailor the game to your liking. Adjust graphics quality, cap the frame rate, and toggle the challenging Obstacle Mode for a truly personalized retro adventure.</p>
+                <p>Tailor every aspect of your game with a deep set of cosmetic, performance, and gameplay settings.</p>
+                <ul>
+                    <li><strong>Visual Control:</strong> Define your aesthetic with unlockable Game Themes, Phone Colors, Snake Skins, and D-Pad Styles.</li>
+                    <li><strong>Performance Tuning:</strong> Balance visual fidelity with battery life using different Graphics Modes and FPS Limits.</li>
+                    <li><strong>Gameplay Modification:</strong> Adjust the challenge with multiple Difficulty Levels and a toggleable Obstacle Mode that offers a 50% score bonus.</li>
+                </ul>
             </div>
         </section>
     </main>
@@ -247,4 +263,3 @@
     </script>
 </body>
 </html>
-```
