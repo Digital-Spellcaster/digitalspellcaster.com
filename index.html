@@ -67,9 +67,22 @@
             border-radius: 4px;
         }
 
+        /* MODIFIED: Add flexbox to align the icon and text */
         section.highlight h2 {
             margin-top: 0;
             color: #ff66ff;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        /* NEW: Style for the icon inside the h2 */
+        section.highlight h2 img {
+            width: 48px;
+            height: 48px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+            border: 2px solid #333;
         }
 
         section.highlight .coming-soon {
@@ -78,18 +91,6 @@
             font-weight: bold;
             margin-top: 1rem;
             text-shadow: 0 0 4px #00eaff, 0 0 10px #3f00ff; /* Added neon glow */
-        }
-
-        .game-icon-section {
-            text-align: center;
-            margin: 2rem 0;
-        }
-
-        .game-icon-section img {
-            max-width: 150px;
-            border-radius: 24px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
-            border: 2px solid #333;
         }
 
         section.sections {
@@ -176,13 +177,12 @@
         </header>
 
         <section class="highlight">
-            <h2>🐍 Retro Snake Pixel Art Edition</h2>
+            <h2>
+                <img src="splash_black_bg.png" alt="Retro Snake Pixel Art Edition Icon">
+                Retro Snake Pixel Art Edition
+            </h2>
             <p>Relive the classic arcade game, reimagined with beautiful pixel art and challenging new levels.</p>
             <p class="coming-soon">Coming to the Play Store Soon!</p>
-        </section>
-
-        <section class="game-icon-section">
-             <img src="splash_black_bg.png" alt="Retro Snake Pixel Art Edition Icon">
         </section>
 
         <section class="sections">
