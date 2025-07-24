@@ -1,7 +1,19 @@
-Retro Snake - Pixel Art Edition
-A modern, offline-ready reimagining of the classic arcade game, built with deep customization and a retro pixel art aesthetic. Developed by The Digital Spellcaster.
+The Official Website of Never Never Studios
+This repository contains the complete source code for digitalspellcaster.com, the official nexus portal for Never Never Studios. This project was developed by The Digital Spellcaster.
 
-This isn't just a clone; it's a complete retro console experience in your browser, designed to be installed on your phone as an offline-first Progressive Web App (PWA).
+The website serves as the main hub for our studio, our projects, and our development philosophy.
+
+🛡️ A Privacy-First Studio
+Never Never Studios is a privacy-first game studio. We believe that your data is your own. Our promise to you is simple:
+
+No unnecessary permissions: We will never ask for access to your device's data unless it is absolutely essential for a core gameplay feature.
+
+No data selling: We will never sell or share your data with third parties.
+
+No tracking: We do not include invasive trackers or analytics in our games. Your gameplay is your business.
+
+Featured Project: Retro Snake - Pixel Art Edition
+Our debut title is a modern, offline-ready reimagining of the classic arcade game, built with deep customization and a retro pixel art aesthetic. This isn't just a clone; it's a complete retro console experience in your browser, designed to be installed on your phone as an offline-first Progressive Web App (PWA).
 
 🎮 Gameplay Features
 Dynamic Power-ups: Collect a variety of items that change the gameplay, including Ghost Mode, Star Power (for invincibility), Food Magnets, and Length Cutters.
@@ -26,11 +38,8 @@ Graphics Modes: Choose between Performance, Quality, Ultra, and GOD modes to bal
 
 FPS Capping: Lock the framerate to 30, 60, or 90 FPS to ensure a smooth experience on any device or to conserve battery.
 
-🌐 Website
-Check out the official landing page I built at digitalspellcaster.com!
-
 🚀 Coming Soon
 Keep an eye out! Retro Snake is coming to the Google Play Store.
 
 🧙‍♂️ Author
-This game and website was crafted by The Digital Spellcaster 2025.
+This project was crafted by The Digital Spellcaster for Never Never Studios, © 2025.
