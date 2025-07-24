@@ -4,128 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Privacy Policy – Retro Snake</title>
-    <style>
-        /* General Body and Background Styles */
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #0c0c0f;
-            color: #f0f0f5;
-            line-height: 1.6;
-        }
-
-        #starfield {
-            position: fixed;
-            top: 0;
-            left: 0;
-            z-index: -1;
-            width: 100%;
-            height: 100%;
-            background: black;
-            pointer-events: none;
-        }
-
-        main, .sections {
-            max-width: 960px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-
-        /* Header and Hero Section */
-        header.hero {
-            text-align: center;
-            margin: 4rem auto 3rem auto;
-        }
-
-        header.hero h1 {
-            font-size: 3rem;
-            background: linear-gradient(90deg, #7f00ff, #e100ff);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin-bottom: 0.5rem;
-        }
-
-        header.hero p {
-            font-size: 1.25rem;
-            color: #ccc;
-        }
-
-        .subtitle-glow {
-            color: #00eaff;
-            font-weight: bold;
-            text-shadow: 0 0 4px #00eaff, 0 0 10px #3f00ff;
-        }
-
-        /* Content Sections */
-        .sections {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1.5rem;
-            justify-content: center;
-        }
-
-        .block {
-            background: #16161c;
-            padding: 1.25rem;
-            flex: 1 1 300px;
-            border-radius: 8px;
-            border: 1px solid #2c2c38;
-        }
-
-        .block h3 {
-            color: #9c4dff;
-            margin-top: 0;
-        }
-
-        .block ul {
-            list-style-type: none;
-            padding-left: 0;
-        }
-        
-        .block li {
-            margin-bottom: 0.5rem;
-        }
-
-        /* Footer */
-        footer {
-            margin-top: 4rem;
-            padding: 2rem 1rem;
-            text-align: center;
-            font-size: 0.85rem;
-            color: #888;
-            border-top: 1px solid #222;
-        }
-
-        footer a, .block a {
-            color: #00eaff;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        footer a:hover, .block a:hover {
-            text-decoration: underline;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            body {
-                padding: 0;
-            }
-            main, .sections {
-                padding: 2rem 1rem;
-            }
-            header.hero h1 {
-                font-size: 2.5rem;
-            }
-            .sections {
-                flex-direction: column;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/png" href="IAI-B.png" />
 </head>
 <body>
     <canvas id="starfield"></canvas>
+
+    <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="game.html">Games</a>
+        <a href="privacy.html" class="active">Privacy</a>
+        <a href="laws.html">The Laws</a>
+    </nav>
 
     <main>
         <header class="hero">
@@ -163,62 +53,12 @@
                 </ul>
             </div>
         </section>
-
-        <footer>
-            <p>© 2025 The Digital Spellcaster — <a href="https://www.digitalspellcaster.com">www.digitalspellcaster.com</a></p>
-        </footer>
     </main>
 
-    <script>
-        const canvas = document.getElementById('starfield');
-        if (canvas) {
-            const ctx = canvas.getContext('2d');
-            let stars = [];
+    <footer>
+        <p>© 2025 Never Never Studios — A Digital Spellcaster Production</p>
+    </footer>
 
-            function resize() {
-                canvas.width = window.innerWidth;
-                canvas.height = window.innerHeight;
-            }
-            window.addEventListener('resize', resize);
-            resize();
-
-            function createStars(count) {
-                stars = [];
-                for (let i = 0; i < count; i++) {
-                    stars.push({
-                        x: Math.random() * canvas.width,
-                        y: Math.random() * canvas.height,
-                        radius: Math.random() * 1.5 + 0.3,
-                        velocity: Math.random() * 0.15 + 0.05,
-                        alpha: Math.random(),
-                        glow: Math.random() * 2 
-                    });
-                }
-            }
-            createStars(300);
-
-            function draw() {
-                if (!ctx) return;
-                ctx.clearRect(0, 0, canvas.width, canvas.height);
-                for (let star of stars) {
-                    ctx.beginPath();
-                    ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
-                    ctx.fillStyle = `rgba(255, 255, 255, ${star.alpha})`;
-                    ctx.shadowColor = '#7f00ff';
-                    ctx.shadowBlur = star.glow;
-                    ctx.fill();
-
-                    star.y += star.velocity;
-
-                    if (star.y > canvas.height) {
-                        star.y = 0;
-                        star.x = Math.random() * canvas.width;
-                    }
-                }
-                requestAnimationFrame(draw);
-            }
-            draw();
-        }
-    </script>
+    <script src="starfield.js"></script>
 </body>
 </html>
