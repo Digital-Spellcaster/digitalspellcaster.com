@@ -1,8 +1,6 @@
-Allow all good web crawlers by default
 User-agent: *
 Disallow:
 
-Block specific crawlers that are often aggressive or unnecessary
 User-agent: Yandex
 Disallow: /
 
@@ -21,7 +19,6 @@ Disallow: /
 User-agent: PetalBot
 Disallow: /
 
-Block common AI data scrapers
 User-agent: GPTBot
 Disallow: /
 
@@ -34,5 +31,4 @@ Disallow: /
 User-agent: CCBot
 Disallow: /
 
-Location of sitemap
 Sitemap: https://www.google.com/search?q=https://www.digitalspellcaster.com/sitemap.xml
