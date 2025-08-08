@@ -5,7 +5,47 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>The Laws of the Digital Spellcaster</title>
   <link rel="stylesheet" href="styles.css" />
- </head>
+
+  <!-- SEO + social cards -->
+  <meta name="description" content="The Laws of the Digital Spellcaster — high‑trust, privacy‑first software principles by The Digital Spellcaster of Never Never Studios." />
+  <meta property="og:title" content="The Laws of the Digital Spellcaster" />
+  <meta property="og:description" content="High‑trust, privacy‑first software principles. Learn about the developer and Never Never Studios." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.digitalspellcaster.com/laws.html" />
+  <meta name="twitter:card" content="summary" />
+
+  <!-- Mastodon verification (replace host if different) -->
+  <link rel="me" href="https://mastodon.social/@astraflare" />
+
+  <!-- Structured data: Person + Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "The Laws of the Digital Spellcaster",
+    "url": "https://www.digitalspellcaster.com/laws.html",
+    "about": {
+      "@type": "Person",
+      "name": "The Digital Spellcaster",
+      "alternateName": "The Digital Spellcaster",
+      "jobTitle": "AI Systems Builder, Privacy Advocate, Software Engineer",
+      "description": "Orchestrates multi‑AI architectures with a focus on high‑trust, ethical design.",
+      "sameAs": [
+        "https://mastodon.social/@astraflare"
+      ]
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Never Never Studios",
+      "url": "https://www.digitalspellcaster.com/",
+      "brand": {
+        "@type": "Brand",
+        "name": "Never Never Studios"
+      }
+    }
+  }
+  </script>
+</head>
 <body>
   <canvas id="starfield"></canvas>
 
@@ -22,7 +62,40 @@
         <p class="subtitle-glow">Our code. Our word. Our world.</p>
       </header>
 
-      <section class="sections">
+      <!-- Developer section for Google for Startups profile reviewers -->
+      <section class="sections" id="developer">
+        <div class="block">
+          <h2>👤 The Developer</h2>
+          <p><strong>The Digital Spellcaster</strong> — AI Systems Builder, Privacy Advocate, and Software Engineer. I don’t write code directly; I architect and orchestrate it. I coordinate specialized AI collaborators to build <em>high‑trust, high‑performance</em> systems grounded in ethical design.</p>
+          <ul class="kv">
+            <li><strong>Focus:</strong> Multi‑AI orchestration • Safety‑by‑design • Privacy‑first UX</li>
+            <li><strong>Notable work:</strong> Composite Crochet Engine; high‑trust gameplay pipelines</li>
+            <li><strong>Principles:</strong> Intent, transparency, empowerment, freedom, precision</li>
+          </ul>
+        </div>
+
+        <div class="block" id="contact">
+          <h2>🔗 Social & Contact</h2>
+          <ul class="links">
+            <li><a rel="me noopener noreferrer" target="_blank" href="https://mastodon.social/@astraflare" aria-label="Mastodon: @astraflare">Mastodon <span class="mono">@astraflare</span></a></li>
+            <li><a rel="noopener noreferrer" target="_blank" href="mailto:hello@digitalspellcaster.com" aria-label="Email">hello@digitalspellcaster.com</a></li>
+            <li><a rel="noopener noreferrer" target="_blank" href="https://www.digitalspellcaster.com/" aria-label="Website">digitalspellcaster.com</a></li>
+            <!-- Optional: add GitHub/LinkedIn when ready -->
+          </ul>
+        </div>
+
+        <div class="block" id="company">
+          <h2>🏢 Never Never Studios</h2>
+          <p>Indie lab building privacy‑respecting software and humane game systems. We design repeatable pipelines where AI augments human intent without trapping users in dark patterns.</p>
+          <ul class="kv">
+            <li><strong>Mission:</strong> Ship tools that users can trust — auditable, reversible, and portable.</li>
+            <li><strong>Ethics:</strong> No data selling • Clear consent • User‑owned exports by default.</li>
+            <li><strong>Location:</strong> USA (remote‑first).</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="sections" id="laws">
         <div class="block">
           <h3>🧾 Law #1 – Honor Intent</h3>
           <p>Every line of code must align with purpose, never obfuscate for vanity.</p>
@@ -54,6 +127,17 @@
     <p>© 2025 Never Never Studios — A Digital Spellcaster Production</p>
   </footer>
 
-  <script src="starfield.js"></script>
+  <!-- Performance: defer starfield render until after content paints -->
+  <script src="starfield.js" defer></script>
+
+  <style>
+    /* Minimal utility styles to support new blocks if not in styles.css */
+    .kv { list-style: none; padding: 0; margin: .5rem 0; }
+    .kv li { margin: .25rem 0; }
+    .links { list-style: none; padding: 0; margin: .5rem 0; }
+    .links li { margin: .25rem 0; }
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; }
+  </style>
 </body>
 </html>
+
